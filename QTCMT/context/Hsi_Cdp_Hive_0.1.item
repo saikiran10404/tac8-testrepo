@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_IwcewM6aEfCyFoSruQeaMA" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_Iwcewc6aEfCyFoSruQeaMA" comment="" name="Hive_Server" prompt="Hive_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwcews6aEfCyFoSruQeaMA" comment="" name="Hive_Port" prompt="Hive_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwcew86aEfCyFoSruQeaMA" comment="" name="Hive_Database" prompt="Hive_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_IwcexM6aEfCyFoSruQeaMA" comment="" name="Hive_Login" prompt="Hive_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwcexc6aEfCyFoSruQeaMA" comment="" name="Hive_Password" prompt="Hive_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+  <contextParameter xmi:id="_Iwcexs6aEfCyFoSruQeaMA" comment="" name="Hive_hiveAdditionaljdbcsetting" prompt="Hive_hiveAdditionaljdbcsetting?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwcex86aEfCyFoSruQeaMA" comment="" name="Hive_HivePrincipal" prompt="Hive_HivePrincipal?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_IwceyM6aEfCyFoSruQeaMA" comment="" name="Hive_NamenodePrincipal" prompt="Hive_NamenodePrincipal?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwceyc6aEfCyFoSruQeaMA" comment="" name="Hive_Principal" prompt="Hive_Principal?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwceys6aEfCyFoSruQeaMA" comment="" name="Hive_Keytab" prompt="Hive_Keytab?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_Iwcey86aEfCyFoSruQeaMA" comment="" name="Hive_TruststorePath" prompt="Hive_TruststorePath?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_IwcezM6aEfCyFoSruQeaMA" comment="" name="Hive_TruststoePassword" prompt="Hive_TruststoePassword?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+</talendfile:ContextType>

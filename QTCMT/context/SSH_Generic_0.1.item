@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_JJsYEM9REfCyFoSruQeaMA" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_JJsYEc9REfCyFoSruQeaMA" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_JJsYEs9REfCyFoSruQeaMA" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+  <contextParameter xmi:id="_JJsYE89REfCyFoSruQeaMA" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_JJsYFM9REfCyFoSruQeaMA" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_JJsYFc9REfCyFoSruQeaMA" comment="" name="ssh_Knit_Command" prompt="ssh_Knit_Command?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+</talendfile:ContextType>

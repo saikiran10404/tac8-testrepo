@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_cCVKMHCXEfCK9rSMPSaJDw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_cDxUoHCXEfCK9rSMPSaJDw" comment="" name="sas_client_id" prompt="sas_client_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUoXCXEfCK9rSMPSaJDw" comment="" name="sas_client_secret" prompt="sas_client_secret?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUonCXEfCK9rSMPSaJDw" comment="" name="sas_keyvault_name" prompt="sas_keyvault_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUo3CXEfCK9rSMPSaJDw" comment="" name="sas_keyvault_secret_name_hsilanding" prompt="sas_keyvault_secret_name_hsilanding?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUpHCXEfCK9rSMPSaJDw" comment="" name="sas_keyvault_secret_name_hssynapsedwdatalakefs" prompt="sas_keyvault_secret_name_hssynapsedwdatalakefs?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUpXCXEfCK9rSMPSaJDw" comment="" name="sas_tenant_id" prompt="sas_tenant_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUpnCXEfCK9rSMPSaJDw" comment="value generated from job" name="sas_url_token_hsilanding" prompt="sas_url_token_hsilanding?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUp3CXEfCK9rSMPSaJDw" comment="value generated from job" name="sas_token_hssynapsedwdatalakefs" prompt="sas_token_hssynapsedwdatalakefs?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUqHCXEfCK9rSMPSaJDw" comment="" name="sas_keyvault_secret_name_storagelevelsas" prompt="sas_keyvault_secret_name_storagelevelsas?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUqXCXEfCK9rSMPSaJDw" comment="value generated from job" name="sas_token_storagelevelsas" prompt="sas_token_storagelevelsas?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_cDxUqnCXEfCK9rSMPSaJDw" comment="" name="Sas_Url" prompt="Sas_Url?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+</talendfile:ContextType>

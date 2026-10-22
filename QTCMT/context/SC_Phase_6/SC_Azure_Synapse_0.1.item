@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_zHbQ4DbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter xmi:id="_zHbQ4TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Server" prompt="Azure_Synapse_Connection_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ4jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Port" prompt="Azure_Synapse_Connection_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ4zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Schema" prompt="Azure_Synapse_Connection_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ5DbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Database" prompt="Azure_Synapse_Connection_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ5TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Login" prompt="Azure_Synapse_Connection_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ5jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Password" prompt="Azure_Synapse_Connection_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_zHbQ5zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_AdditionalParams" prompt="Azure_Synapse_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_zHbQ6DbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Dev">
+    <contextParameter xmi:id="_zHbQ6TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Server" prompt="Azure_Synapse_Connection_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ6jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Port" prompt="Azure_Synapse_Connection_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ6zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Schema" prompt="Azure_Synapse_Connection_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ7DbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Database" prompt="Azure_Synapse_Connection_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ7TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Login" prompt="Azure_Synapse_Connection_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ7jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Password" prompt="Azure_Synapse_Connection_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_zHbQ7zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_AdditionalParams" prompt="Azure_Synapse_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_zHbQ8DbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Prod">
+    <contextParameter xmi:id="_zHbQ8TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Server" prompt="Azure_Synapse_Connection_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ8jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Port" prompt="Azure_Synapse_Connection_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ8zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Schema" prompt="Azure_Synapse_Connection_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ9DbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Database" prompt="Azure_Synapse_Connection_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ9TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Login" prompt="Azure_Synapse_Connection_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_zHbQ9jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Password" prompt="Azure_Synapse_Connection_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_zHbQ9zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_AdditionalParams" prompt="Azure_Synapse_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_zHbQ-DbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Qa">
+    <contextParameter xmi:id="_zHbQ-TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Server" prompt="Azure_Synapse_Connection_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="synapse-qa-dw-workspace.privatelink.sql.azuresynapse.net"/>
+    <contextParameter xmi:id="_zHbQ-jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Port" prompt="Azure_Synapse_Connection_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1433"/>
+    <contextParameter xmi:id="_zHbQ-zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Schema" prompt="Azure_Synapse_Connection_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sc_hsi_consumption"/>
+    <contextParameter xmi:id="_zHbQ_DbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Database" prompt="Azure_Synapse_Connection_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="QADW.sc_hsi_consumption."/>
+    <contextParameter xmi:id="_zHbQ_TbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Login" prompt="Azure_Synapse_Connection_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="lcdTalend"/>
+    <contextParameter xmi:id="_zHbQ_jbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_Password" prompt="Azure_Synapse_Connection_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:cVY7hQWUYoVbs9GbE7QK7ae2PxXCMtj0cs//c7wwF8YK7JeASqDF7A=="/>
+    <contextParameter xmi:id="_zHbQ_zbYEfCnVsnWKyt9ow" comment="" name="Azure_Synapse_Connection_AdditionalParams" prompt="Azure_Synapse_Connection_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

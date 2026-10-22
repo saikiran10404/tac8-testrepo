@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="__5ZukDbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter xmi:id="__5ZukTbYEfCnVsnWKyt9ow" comment="" name="ADLS_AccountName" prompt="ADLS_AccountName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZukjbYEfCnVsnWKyt9ow" comment="" name="ADLS_Accountkey" prompt="ADLS_Accountkey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZukzbYEfCnVsnWKyt9ow" comment="" name="ADLS_ContainerName" prompt="ADLS_ContainerName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZulDbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASToken" prompt="ADLS_SASToken?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZulTbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASURL" prompt="ADLS_SASURL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="__5ZuljbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Dev">
+    <contextParameter xmi:id="__5ZulzbYEfCnVsnWKyt9ow" comment="" name="ADLS_AccountName" prompt="ADLS_AccountName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZumDbYEfCnVsnWKyt9ow" comment="" name="ADLS_Accountkey" prompt="ADLS_Accountkey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZumTbYEfCnVsnWKyt9ow" comment="" name="ADLS_ContainerName" prompt="ADLS_ContainerName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZumjbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASToken" prompt="ADLS_SASToken?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZumzbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASURL" prompt="ADLS_SASURL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="__5ZunDbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Prod">
+    <contextParameter xmi:id="__5ZunTbYEfCnVsnWKyt9ow" comment="" name="ADLS_AccountName" prompt="ADLS_AccountName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZunjbYEfCnVsnWKyt9ow" comment="" name="ADLS_Accountkey" prompt="ADLS_Accountkey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZunzbYEfCnVsnWKyt9ow" comment="" name="ADLS_ContainerName" prompt="ADLS_ContainerName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZuoDbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASToken" prompt="ADLS_SASToken?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZuoTbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASURL" prompt="ADLS_SASURL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="__5ZuojbYEfCnVsnWKyt9ow" confirmationNeeded="false" hide="false" name="Qa">
+    <contextParameter xmi:id="__5ZuozbYEfCnVsnWKyt9ow" comment="" name="ADLS_AccountName" prompt="ADLS_AccountName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZupDbYEfCnVsnWKyt9ow" comment="" name="ADLS_Accountkey" prompt="ADLS_Accountkey?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZupTbYEfCnVsnWKyt9ow" comment="" name="ADLS_ContainerName" prompt="ADLS_ContainerName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZupjbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASToken" prompt="ADLS_SASToken?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="__5ZupzbYEfCnVsnWKyt9ow" comment="" name="ADLS_SASURL" prompt="ADLS_SASURL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

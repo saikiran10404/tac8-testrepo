@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_HTYAAENpEe-CYtfYjvMkpA" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_HTYAAUNpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Port" prompt="Hsi_Fin_Sftp_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_HTYAAkNpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Username" prompt="Hsi_Fin_Sftp_Username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_HTYAA0NpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Password" prompt="Hsi_Fin_Sftp_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_HTYABENpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Host" prompt="Hsi_Fin_Sftp_Host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_HTYABUNpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Directory" prompt="Hsi_Fin_Sftp_Directory?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_HTYABkNpEe-CYtfYjvMkpA" confirmationNeeded="false" name="Dev">
+    <contextParameter xmi:id="_HTYAB0NpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Port" prompt="Hsi_Fin_Sftp_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_HTYACENpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Username" prompt="Hsi_Fin_Sftp_Username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_HTYACUNpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Password" prompt="Hsi_Fin_Sftp_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_HTYACkNpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Host" prompt="Hsi_Fin_Sftp_Host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_HTYAC0NpEe-CYtfYjvMkpA" comment="" name="Hsi_Fin_Sftp_Directory" prompt="Hsi_Fin_Sftp_Directory?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

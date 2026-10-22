@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_bStA0P3mEe2k_Ia0kuZIkA" confirmationNeeded="false" hide="false" name="Dev">
+    <contextParameter xmi:id="_bStA0f3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Host" prompt="Mysql_Host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA0v3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Port" prompt="Mysql_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA0_3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Username" prompt="Mysql_Username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA1P3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Password" prompt="Mysql_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_bStA1f3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Database" prompt="Mysql_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA1v3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Additional_Param" prompt="Mysql_Additional_Param?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_Ew3AMDbuEfCfCLk1MiYlyQ" confirmationNeeded="false" hide="true" name="Prod">
+    <contextParameter xmi:id="_Ew3AMTbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Host" prompt="Mysql_Host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="172.20.121.90"/>
+    <contextParameter xmi:id="_Ew3AMjbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Port" prompt="Mysql_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_Ew3AMzbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Username" prompt="Mysql_Username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="tmetadata"/>
+    <contextParameter xmi:id="_Ew3ANDbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Password" prompt="Mysql_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:kK5kKcnqrj/Tzg7sMIf41DpWx2tHbYnu6fn1x29YANSOlkqsv2IkDJ+W"/>
+    <contextParameter xmi:id="_Ew3ANTbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Database" prompt="Mysql_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="CDH_METADATA"/>
+    <contextParameter xmi:id="_Ew3ANjbuEfCfCLk1MiYlyQ" comment="" name="Mysql_Additional_Param" prompt="Mysql_Additional_Param?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="noDatetimeStringSync=true&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=America/Chicago"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_bStA3v3mEe2k_Ia0kuZIkA" confirmationNeeded="false" hide="false" name="Qa">
+    <contextParameter xmi:id="_bStA3_3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Host" prompt="Mysql_Host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA4P3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Port" prompt="Mysql_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA4f3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Username" prompt="Mysql_Username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA4v3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Password" prompt="Mysql_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_bStA4_3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Database" prompt="Mysql_Database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_bStA5P3mEe2k_Ia0kuZIkA" comment="" name="Mysql_Additional_Param" prompt="Mysql_Additional_Param?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

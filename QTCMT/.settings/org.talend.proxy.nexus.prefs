@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+nexus.proxy.enable=true
+nexus.proxy.repository.id=talend-custom-libs-snapshot
+nexus.proxy.type=NEXUS_3
+nexus.proxy.url=http\://localhost\:8081/
+repository.auth.type=User/Password

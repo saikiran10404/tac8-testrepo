@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_Xl6mMJOqEfCYq7Fjrg4QKA" confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter xmi:id="_Xl6mMZOqEfCYq7Fjrg4QKA" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_Xl6mMpOqEfCYq7Fjrg4QKA" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_Xl6mM5OqEfCYq7Fjrg4QKA" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_Xl6mNJOqEfCYq7Fjrg4QKA" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_Xl6mNZOqEfCYq7Fjrg4QKA" comment="" name="ssh_Knit_Command" prompt="ssh_Knit_Command?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_1qWqMJOqEfCYq7Fjrg4QKA" confirmationNeeded="false" hide="false" name="Qa">
+    <contextParameter xmi:id="_1qWqMZOqEfCYq7Fjrg4QKA" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_1qWqMpOqEfCYq7Fjrg4QKA" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_1qWqM5OqEfCYq7Fjrg4QKA" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_1qWqNJOqEfCYq7Fjrg4QKA" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_1qWqNZOqEfCYq7Fjrg4QKA" comment="" name="ssh_Knit_Command" prompt="ssh_Knit_Command?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
