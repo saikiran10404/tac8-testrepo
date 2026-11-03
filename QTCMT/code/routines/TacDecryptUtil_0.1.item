@@ -1,0 +1,47 @@
+package routines;
+
+import black.door.util.Base256;
+import javax.crypto.Cipher;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.util.Base64;
+import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
+
+public class TacDecryptUtil {
+
+    /**
+     * Decrypts a TAC ENC_IND_ encrypted value using a master key passed directly.
+     * {talendTypes} String
+     * {Category} TacDecrypt
+     * {param} string("ENC_IND_2026-10-16-15-14_xxxx") input: the encrypted value
+     * {param} string("p...nqon...") masterKeyBase256: the master.key.<timestamp> value from configuration.properties
+     * {example} decryptWithKey("ENC_IND_2026-10-16-15-14_xxxx", "p...nqon...") # mysql_to_snowflake_demo_storage
+     */
+    public static String decryptWithKey(String input, String masterKeyBase256) {
+        try {
+            if (input == null || input.isEmpty()) {
+                return input;
+            }
+            String marker = "ENC_IND_";
+            if (!input.startsWith(marker)) {
+                return input;
+            }
+
+            String withoutMarker = input.substring(marker.length());
+            String cipherTextB64 = withoutMarker.substring(17); // skip 16-char identifier + "_"
+
+            byte[] keyBytes = Base256.decode(masterKeyBase256);
+            byte[] encBytes = Base64.getDecoder().decode(cipherTextB64);
+            byte[] iv = Arrays.copyOfRange(encBytes, 0, 12);
+            byte[] ct = Arrays.copyOfRange(encBytes, 12, encBytes.length);
+
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(keyBytes, "AES"), new GCMParameterSpec(128, iv));
+            return new String(cipher.doFinal(ct), StandardCharsets.UTF_8);
+
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to decrypt value: " + e.getMessage(), e);
+        }
+    }
+}
