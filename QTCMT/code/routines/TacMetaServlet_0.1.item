@@ -1,0 +1,44 @@
+package routines;
+
+import java.util.Base64;
+
+public class TacMetaServlet {
+
+    /**
+     * Escapes a value for use inside a JSON string.
+     * {talendTypes} String
+     * {Category} TacMetaServlet
+     * {param} string("a\"b") value: raw text
+     */
+    public static String esc(String s) {
+        if (s == null) return "";
+        return s.replace("\\", "\\\\").replace("\"", "\\\"")
+                .replace("\n", "\\n").replace("\r", "\\r").replace("\t", "\\t");
+    }
+
+    /**
+     * Builds the Base64 payload for the TAC metaServlet updateTask action.
+     * {talendTypes} String
+     * {Category} TacMetaServlet
+     * {param} string("user") user: TAC user
+     * {param} string("pass") pass: TAC password
+     * {param} int(1) taskId: TAC task id
+     * {param} string("Default") contextName: context name of the task
+     * {param} string("\"k\":\"v\",\"k2\":\"v2\"") pairs: already escaped JSON key/value pairs, comma separated
+     */
+    public static String buildEncoded(String user, String pass, int taskId,
+                                      String contextName, String pairs) {
+        try {
+            String payload = "{\"actionName\":\"updateTask\","
+                + "\"authUser\":\"" + esc(user) + "\","
+                + "\"authPass\":\"" + esc(pass) + "\","
+                + "\"context\":{" + (pairs == null ? "" : pairs) + "},"
+                + "\"taskId\":" + taskId + ","
+                + "\"contextName\":\"" + esc(contextName) + "\","
+                + "\"contextParamsRefresh\":true}";
+            return Base64.getEncoder().encodeToString(payload.getBytes("UTF-8"));
+        } catch (java.io.UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}

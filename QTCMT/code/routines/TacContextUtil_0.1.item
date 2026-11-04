@@ -1,0 +1,230 @@
+package routines;
+
+import java.net.URI;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.util.Base64;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class TacContextUtil {
+
+    /** One TAC task and the context values collected for it from the TAC database. */
+    public static class Task {
+        public final int id;
+        public final String name;
+        public final Map<String, String> ctx = new LinkedHashMap<String, String>();
+        public final Set<String> secrets = new HashSet<String>();
+
+        Task(int id, String name) {
+            this.id = id;
+            this.name = name;
+        }
+    }
+
+    private static final String KEY = "tacTaskContexts";
+
+    /**
+     * Start a fresh collection (call once, before the DB rows are read).
+     * {talendTypes} void
+     * {Category} TacContext
+     * {param} Map(globalMap) globalMap
+     */
+    @SuppressWarnings("unchecked")
+    public static void reset(Map<String, Object> globalMap) {
+        globalMap.put(KEY, new LinkedHashMap<Integer, Task>());
+    }
+
+    /**
+     * Add one DB row (one context parameter of one task). The value is decrypted when it is a TAC
+     * ENC_IND_ value. Rows without a parameter name (task without context parameters) are ignored.
+     * {talendTypes} void
+     * {Category} TacContext
+     * {param} Map(globalMap) globalMap
+     * {param} Integer(1) taskId: executiontask.id
+     * {param} string("my_task") taskName
+     * {param} string("db_host") paramName
+     * {param} Boolean(true) override: executiontaskjobprm.override
+     * {param} string("value") defaultValue: executiontaskjobprm.defaultvalue
+     * {param} string("value") originalValue: executiontaskjobprm.originalvalue
+     * {param} string("masterKey") masterKey: TAC master key (Base256), see TacDecryptUtil
+     */
+    @SuppressWarnings("unchecked")
+    public static void collect(Map<String, Object> globalMap, Integer taskId, String taskName, String paramName,
+            Boolean override, String defaultValue, String originalValue, String masterKey) {
+        if (taskId == null || paramName == null || paramName.isEmpty()) {
+            return;
+        }
+        Map<Integer, Task> tasks = (Map<Integer, Task>) globalMap.get(KEY);
+        if (tasks == null) {
+            reset(globalMap);
+            tasks = (Map<Integer, Task>) globalMap.get(KEY);
+        }
+        Task t = tasks.get(taskId);
+        if (t == null) {
+            t = new Task(taskId, taskName);
+            tasks.put(taskId, t);
+        }
+        String raw = pickRaw(override, defaultValue, originalValue);
+        boolean encrypted = raw != null && raw.startsWith("ENC_IND_");
+        t.ctx.put(paramName, TacDecryptUtil.decryptWithKey(raw, masterKey));
+        if (encrypted) {
+            t.secrets.add(paramName);
+        }
+    }
+
+    /**
+     * Which stored value is the one the task really uses. Adjust here if your TAC data says otherwise.
+     * Current rule: the task-level value (defaultvalue) wins, the job's original value is the fallback.
+     */
+    static String pickRaw(Boolean override, String defaultValue, String originalValue) {
+        if (defaultValue != null && !defaultValue.isEmpty()) {
+            return defaultValue;
+        }
+        return originalValue;
+    }
+
+    /**
+     * Build the metaServlet runTask request (plain JSON).
+     * {talendTypes} String
+     * {Category} TacContext
+     */
+    public static String buildRunTaskJson(String user, String pass, int taskId, String mode, Map<String, String> ctx,
+            Set<String> maskedParams, boolean maskPassword) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\"actionName\":\"runTask\"");
+        sb.append(",\"authUser\":").append(q(user));
+        sb.append(",\"authPass\":").append(q(maskPassword ? "****" : pass));
+        sb.append(",\"taskId\":").append(taskId);
+        sb.append(",\"mode\":").append(q(mode));
+        sb.append(",\"context\":{");
+        boolean first = true;
+        for (Map.Entry<String, String> e : ctx.entrySet()) {
+            if (!first) {
+                sb.append(',');
+            }
+            first = false;
+            boolean mask = maskedParams != null && maskedParams.contains(e.getKey());
+            sb.append(q(e.getKey())).append(':').append(q(mask ? "****" : e.getValue()));
+        }
+        sb.append("}}");
+        return sb.toString();
+    }
+
+    /** JSON string literal with escaping. */
+    static String q(String s) {
+        if (s == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder("\"");
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            switch (c) {
+            case '"':
+                sb.append("\\\"");
+                break;
+            case '\\':
+                sb.append("\\\\");
+                break;
+            case '\n':
+                sb.append("\\n");
+                break;
+            case '\r':
+                sb.append("\\r");
+                break;
+            case '\t':
+                sb.append("\\t");
+                break;
+            default:
+                if (c < 0x20) {
+                    sb.append(String.format("\\u%04x", (int) c));
+                } else {
+                    sb.append(c);
+                }
+            }
+        }
+        return sb.append('"').toString();
+    }
+
+    /** GET {tacUrl}/metaServlet?{base64(json)}, the same call the tac_api_run_service job makes. */
+    static String callMetaServlet(String tacUrl, String json) throws Exception {
+        String b64 = Base64.getEncoder().encodeToString(json.getBytes(StandardCharsets.UTF_8));
+        String url = tacUrl.replaceAll("/+$", "") + "/metaServlet?" + URLEncoder.encode(b64, StandardCharsets.UTF_8);
+        HttpClient client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(30)).build();
+        HttpRequest req = HttpRequest.newBuilder(URI.create(url)).timeout(Duration.ofMinutes(10)).GET().build();
+        HttpResponse<String> resp = client.send(req, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+        if (resp.statusCode() != 200) {
+            throw new RuntimeException("HTTP " + resp.statusCode() + ": " + resp.body());
+        }
+        return resp.body();
+    }
+
+    /** metaServlet answers {"returnCode":0,...} on success. */
+    static boolean isSuccess(String response) {
+        return response != null && response.matches("(?s).*\"returnCode\"\\s*:\\s*0\\b.*");
+    }
+
+    /**
+     * Run every collected task with the context values read from the database.
+     * Returns the number of tasks that failed. With dryRun=true nothing is sent to TAC; the requests are
+     * only logged (encrypted values and the password are masked).
+     * {talendTypes} int
+     * {Category} TacContext
+     * {param} Map(globalMap) globalMap
+     * {param} string("http://localhost:8080/tac") tacUrl
+     * {param} string("user") user
+     * {param} string("pass") pass
+     * {param} string("asynchronous") mode: asynchronous | synchronous
+     * {param} string("task_a,task_b") taskFilter: comma separated task names, empty = all tasks
+     * {param} boolean(true) dryRun
+     */
+    @SuppressWarnings("unchecked")
+    public static int runAll(Map<String, Object> globalMap, String tacUrl, String user, String pass, String mode,
+            String taskFilter, boolean dryRun) {
+        Map<Integer, Task> tasks = (Map<Integer, Task>) globalMap.get(KEY);
+        if (tasks == null || tasks.isEmpty()) {
+            System.out.println("[TacContext] no tasks with context parameters found");
+            return 0;
+        }
+        Set<String> only = new HashSet<String>();
+        if (taskFilter != null && !taskFilter.trim().isEmpty()) {
+            for (String n : taskFilter.split(",")) {
+                only.add(n.trim());
+            }
+        }
+        int ok = 0, failed = 0, skipped = 0;
+        for (Task t : tasks.values()) {
+            if (!only.isEmpty() && !only.contains(t.name)) {
+                skipped++;
+                continue;
+            }
+            if (dryRun) {
+                System.out.println("[TacContext] DRY RUN task " + t.id + " '" + t.name + "': "
+                        + buildRunTaskJson(user, pass, t.id, mode, t.ctx, t.secrets, true));
+                ok++;
+                continue;
+            }
+            try {
+                String resp = callMetaServlet(tacUrl, buildRunTaskJson(user, pass, t.id, mode, t.ctx, null, false));
+                if (isSuccess(resp)) {
+                    System.out.println("[TacContext] task " + t.id + " '" + t.name + "' started: " + resp);
+                    ok++;
+                } else {
+                    System.out.println("[TacContext] task " + t.id + " '" + t.name + "' FAILED: " + resp);
+                    failed++;
+                }
+            } catch (Exception e) {
+                System.out.println("[TacContext] task " + t.id + " '" + t.name + "' FAILED: " + e.getMessage());
+                failed++;
+            }
+        }
+        System.out.println("[TacContext] done: " + ok + " ok, " + failed + " failed, " + skipped + " skipped by filter");
+        return failed;
+    }
+}
